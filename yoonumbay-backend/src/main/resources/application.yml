@@ -37,3 +37,8 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+security:
+  jwt:
+    secret-key: yoonumbay-secret-key-2025
+    expiration: 86400000 # 24 heures
