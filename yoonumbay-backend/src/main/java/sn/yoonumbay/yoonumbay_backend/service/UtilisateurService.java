@@ -1,13 +1,14 @@
-package sn.yoonumbay.yoonumbay_backend.service.user;
+package sn.yoonumbay.yoonumbay_backend.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import sn.yoonumbay.yoonumbay_backend.entities.user.Utilisateur;
-import sn.yoonumbay.yoonumbay_backend.repository.user.UtilisateurRepository;
+import sn.yoonumbay.yoonumbay_backend.entities.Utilisateur;
+import sn.yoonumbay.yoonumbay_backend.repository.UtilisateurRepository;
 
 @Service
 @RequiredArgsConstructor
@@ -23,5 +24,20 @@ public class UtilisateurService {
 
     public Optional<Utilisateur> trouverParEmail(String email) {
         return repository.findByEmail(email);
+    }
+
+    public Utilisateur save(Utilisateur utilisateur) {
+        return repository.save(utilisateur);
+    }
+
+    public List<Utilisateur> findAll() {
+        return repository.findAll();
+    }
+
+    public void updateStatus(Long id, boolean actif) {
+        Utilisateur utilisateur = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Utilisateur non trouvé"));
+        utilisateur.setActif(actif);
+        repository.save(utilisateur);
     }
 }

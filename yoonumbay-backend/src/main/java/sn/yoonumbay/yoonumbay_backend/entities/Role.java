@@ -1,4 +1,4 @@
-package sn.yoonumbay.yoonumbay_backend.entities.user;
+package sn.yoonumbay.yoonumbay_backend.entities;
 
 public enum Role {
     AGRICULTEUR,

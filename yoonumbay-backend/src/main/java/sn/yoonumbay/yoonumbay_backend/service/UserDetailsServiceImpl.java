@@ -1,4 +1,4 @@
-package sn.yoonumbay.yoonumbay_backend.service.user;
+package sn.yoonumbay.yoonumbay_backend.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import sn.yoonumbay.yoonumbay_backend.repository.user.UtilisateurRepository;
+import sn.yoonumbay.yoonumbay_backend.repository.UtilisateurRepository;
 
 @Service
 @RequiredArgsConstructor

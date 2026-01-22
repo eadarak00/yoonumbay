@@ -1,11 +1,11 @@
-package sn.yoonumbay.yoonumbay_backend.repository.user;
+package sn.yoonumbay.yoonumbay_backend.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import sn.yoonumbay.yoonumbay_backend.entities.user.Utilisateur;
+import sn.yoonumbay.yoonumbay_backend.entities.Utilisateur;
 
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {

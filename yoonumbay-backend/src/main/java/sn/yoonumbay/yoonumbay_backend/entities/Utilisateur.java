@@ -1,4 +1,4 @@
-package sn.yoonumbay.yoonumbay_backend.entities.user;
+package sn.yoonumbay.yoonumbay_backend.entities;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,6 +16,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,6 +27,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Utilisateur implements UserDetails {
 
     @Id
