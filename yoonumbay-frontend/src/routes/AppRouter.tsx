@@ -10,8 +10,8 @@ export default function AppRouter() {
       <Routes>
         {/* Public routes */}
         <Route path="/" element={<Index />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/connexion" element={<Login />} />
+        <Route path="/inscription" element={<Signup />} />
 
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />

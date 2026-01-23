@@ -2,12 +2,13 @@ package sn.yoonumbay.yoonumbay_backend.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import sn.yoonumbay.yoonumbay_backend.dto.AuthRequest;
 import sn.yoonumbay.yoonumbay_backend.dto.AuthResponse;
@@ -28,8 +29,9 @@ public class AuthController {
     @Operation(summary = "Inscription utilisateur")
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(
-            @RequestBody RegisterRequest request
+           @Valid @RequestBody RegisterRequest request
     ) {
+        System.out.println("EMAIL = " + request.getEmail());
         return ResponseEntity.ok(authService.register(request));
     }
 

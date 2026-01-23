@@ -40,5 +40,5 @@ springdoc:
 
 security:
   jwt:
-    secret-key: yoonumbay-secret-key-2025
+    secret-key: d7d001c4b67d07876ce8d369f25408b46be34f942a7b1f20f7a76aa9eef224492b9b9fe708f3ed69d8466e97678fb283ef6598bd3df01c3f62012b663c5e45d4
     expiration: 86400000 # 24 heures

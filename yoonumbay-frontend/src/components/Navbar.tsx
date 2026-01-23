@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,12 +48,14 @@ const Navbar = () => {
                 0
               </span>
             </Button>
-            <Button variant="outline" size="sm">
-              Connexion
-            </Button>
-            <Button size="sm">
-              Inscription
-            </Button>
+           <Button variant="outline" size="sm" asChild>
+            <Link to="/connexion">Connexion</Link>
+          </Button>
+
+          <Button size="sm" asChild>
+            <Link to="/inscription">Inscription</Link>
+          </Button>
+
           </div>
 
           {/* Mobile Menu Button */}

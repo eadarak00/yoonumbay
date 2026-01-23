@@ -1,3 +1,5 @@
+import yoonumbayImage from "@/assets/yoonuMbay.png";
+
 const steps = [
     {
         number: "01",
@@ -27,10 +29,13 @@ const HowItWorksSection = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Comment ça marche ?</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                            Comment ça marche ?
+                        </h2>
                         <p className="text-muted-foreground mb-8 text-lg">
-                            YoonuMbay simplifie chaque étape de votre parcours agricole. Notre processus est conçu pour être simple, efficace et accessible à tous.
+                            YoonuMbay simplifie chaque étape de votre parcours agricole.
                         </p>
+
                         <div className="space-y-8">
                             {steps.map((step) => (
                                 <div key={step.number} className="flex gap-6">
@@ -38,22 +43,28 @@ const HowItWorksSection = () => {
                                         {step.number}
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                        <p className="text-muted-foreground">{step.description}</p>
+                                        <h3 className="text-xl font-bold mb-2">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-muted-foreground">
+                                            {step.description}
+                                        </p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
+
+                    {/* IMAGE */}
                     <div className="lg:w-1/2 relative">
-                        <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 p-8 flex items-center justify-center">
-                            <div className="w-full h-full rounded-2xl bg-card shadow-2xl border border-border overflow-hidden relative">
-                                {/* Mock UI or Image placeholder */}
-                                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                                    <span className="text-primary font-bold text-xl">Interface YoonuMbay</span>
-                                </div>
-                            </div>
+                        <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 p-8">
+                            <img
+                                src={yoonumbayImage}
+                                alt="Interface YoonuMbay"
+                                className="w-full h-full object-cover rounded-2xl shadow-2xl border border-border"
+                            />
                         </div>
+
                         {/* Decorative elements */}
                         <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
                         <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />

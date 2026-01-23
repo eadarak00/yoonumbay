@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  border-color: #e2ddd3;
+}
+
+body {
+  background-color: #fcfbf8;
+  color: #2c3e2c;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classes utilitaires */
+.text-gradient {
+  background: linear-gradient(135deg, #3c9c3a 0%, #d8853d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #3c9c3a 0%, #2f7d2d 100%);
+}
+
+.gradient-subtle {
+  background: linear-gradient(135deg, #f7faf5 0%, #fdf8f2 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(44, 62, 44, 0.06);
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f2ee;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cde5cc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1d1a0;
+}
+
+/* Selection de texte */
+::selection {
+  background-color: rgba(60, 156, 58, 0.2);
+  color: #2c3e2c;
+}
